@@ -19,7 +19,7 @@ def index(request):
 def saludo(request):
     return render(request,'saludo.html',{
         'titulo':'Saludo',
-        'nombre_autor':'Angela Stephany Centeno Macalupu'
+        'autor_saludo':'Angela Stephany Centeno Macalupu'
     })
 
 def rango(request):

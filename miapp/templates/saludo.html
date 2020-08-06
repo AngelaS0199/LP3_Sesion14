@@ -2,12 +2,13 @@
 
 {% block title %}
     {{titulo}}
-{% endblock %}
-{%block content %}
-
+{% endblock%}
+{% block content %}
+  
     <h1 class="title">Bienvenidos</h1>
-    <h2>{{nombre_autor}}</h2>
-    <h3>Estudiante de Ingenieria de Sistemas | UNTELS</h3>
-    <h3>Python...</h3>
-    {{block.super}}
+    {{autor_saludo}}
+    {% load filters %}
+    {{"Iniciando curso LP3"|saludo|safe}}
+
+    <p>{{block.super}}</p>
 {% endblock %}
