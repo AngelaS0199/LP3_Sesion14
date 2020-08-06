@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+
+        <title>
+            {% block title %}
+
+            {% endblock%}
+            |Angela Centeno
+        </title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+    </head>
+    <body>
+        <header>
+            <div id="logotipo">
+                <img src="{% static 'images/python.png' %}" />
+
+                <h1>
+                    Proyecto Web (LP3)
+                </h1>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/inicio"> Inicio </a>
+                </li>
+                <li>
+                    <a href="/saludo"> Mensaje de saludo </a>
+                </li>
+                <li>
+                    <a href="/rango"> Mostrar los numeros [a,b] </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="barra">
+            <span class="esquina-izquierda"></span>
+            <span class="relleno-barra"></span>
+            <span class="esquina-derecha"></span>
+        </div>
+ 
+        <div id ="content">
+            <div class="box">
+                
+                {% block content %}
+                <strong> Contenido en layout (Padre) </strong>
+            
+                {% endblock %}
+            </div>
+             
+        </div>
+        <footer>
+            UNTELS - LENGUAJE DE PROGRAMACION III &COPY; Angela Centeno
+        </footer>
+    </body>
+</html>
