@@ -26,13 +26,13 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/inicio"> Inicio </a>
+                    <a href="{%url 'inicio' %}"> Inicio </a>
                 </li>
                 <li>
-                    <a href="/saludo"> Mensaje de saludo </a>
+                    <a href="{%url 'saludo' %}"> Mensaje de saludo </a>
                 </li>
                 <li>
-                    <a href="/rango"> Mostrar los numeros [a,b] </a>
+                    <a href="{%url 'rango' %}"> Mostrar los numeros [a,b] </a>
                 </li>
             </ul>
         </nav>
@@ -53,7 +53,7 @@
              
         </div>
         <footer>
-            UNTELS - LENGUAJE DE PROGRAMACION III &COPY; Angela Centeno
+            UNTELS - LENGUAJE DE PROGRAMACION III &COPY; Angela Centeno - {% now "d/M/Y" %}
         </footer>
     </body>
 </html>
